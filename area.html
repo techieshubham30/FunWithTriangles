@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fun with triangle</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Montserrat&display=swap" rel="stylesheet">
+<style>
+    .areacontainer{
+        width: 50vw;
+        margin: auto;
+    }
+    .radio{
+        
+    }
+    img{
+        height:30vh;
+        margin-top: 1rem;
+    }
+    .side{
+        margin: 1rem;
+        margin-right: 5rem;
+        height: 8vh;
+        width: 7vw;
+        padding-left: 2rem;
+        background-color: var(--primary-color);
+        color: white;
+        font-size: larger;
+
+    }
+
+    button{
+        width: 7vw;
+        height:5vh;
+        border-radius: 1rem;
+        color: white;
+        background-color:var(--primary-color);
+        font-size: larger;
+        margin-top: 1rem;
+        margin-bottom: 1rem;
+
+    }
+    .flex-box{
+        display: flex;
+        justify-content:center;
+        align-items: center;
+    }
+    .area-1-btn-box{
+        display: flex;
+        justify-content:center;
+        align-items: center;
+
+    }
+    .area1-output{
+        border: 1px solid black;
+        height: 8vh;
+        width:8vw;
+        margin: auto;
+        margin-left: 16rem;
+        padding-left:5rem;
+        padding-top: 2rem;
+        border-radius: 1rem;
+        margin-top: 1rem;
+    }
+    .img{
+        margin-left: 9rem;
+        margin-top: 2rem;
+    }
+    
+
+</style>
+</head>
+<body>
+ <div class="areacontainer">
+     <h1 style="margin-left: 16rem;">Calculate Area</h1>
+     <h3 style="margin-left: 5rem;">Select an option below as per the data you have for a triangle</h3>
+     <div class="radio">
+         <div>
+            <input type="radio"  id="area1">
+            <label>
+                If you have base and height length
+            </label>
+         </div>
+        
+        <div>
+        <input type="radio"  id="area2">
+        <label> If you have length of 3 sides</label>
+        </div>
+        <div>
+        <input type="radio"  id="area3">
+        <label> If you have length of 2 sides and included angle
+        </label>
+        </div>
+
+        <div class="areacal-1">
+            <div class="img">
+                <img src="images/triangle-base-height.png" alt="image">
+            </div>
+    
+            <div class="flex-box">
+                <strong>base=</strong><input type="number" class="base side">
+                <strong>height=</strong><input type="number" class="height side">
+            </div>
+            <div class="area-1-btn-box">
+                <button class="area1-btn">calculate</button>
+            </div>
+            <div class="head" style="margin-left: 10rem;">
+                <h2>Area will be calculated here-</h2>
+            </div>
+            <div class="area1-output">
+                <p id="area1-output">
+    
+                </p>
+            </div>
+        </div>
+        
+     </div>
+ </div>
+
+        <footer class="footer">
+            
+            <ul class="social-links list-non-bullet">
+                <li class="list-item-inline">
+                    <a class="link" href="https://www.linkedin.com/in/techieshubham">linkedin</a>
+                </li>
+                <li class="list-item-inline">
+                    <a class="link" href="https://github.com/techieshubham30">github</a>
+                </li>
+                <li class="list-item-inline">
+                    <a class="link" href="https://twitter.com/shubhamsingh088">twitter</a>
+                </li>
+                <li class="list-item-inline">
+                    <a class="link" href="https://shubhamsingh-1.netlify.app/">portfolio</a>
+                </li>
+            </ul>
+            <br>
+
+            <hr style="color: white;">
+
+            <div class="legacyText">
+                &COPY; <a id="legacyText" href="https://shubhamsingh-1.netlify.app/">shubham</a> | <a id="legacyText" href="https://shubhamsingh-1.netlify.app/projects.html">see my other projects</a>
+
+            </div>
+        </footer>
+
+
+    <script src="app.js"></script>
+
+
+</body>
+</html>

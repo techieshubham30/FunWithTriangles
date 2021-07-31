@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fun with triangle</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Montserrat&display=swap" rel="stylesheet">
+<style>
+    
+    .flex-box{
+        display: flex;
+        justify-content:center;
+        align-items: center;
+    }
+    .main{
+        height:80vh;
+        width: 50vw;
+        margin: auto;
+        margin-top:2.2rem;
+    }
+    img{
+        height:30vh;
+        margin-top: 1rem;
+    }
+    .head{
+        width:40vw;
+        margin-left: 7rem;
+        
+    }
+    .img{
+        margin-left:17.5rem;
+    }
+
+    .side{
+        margin: 1rem;
+        margin-right: 5rem;
+        height: 8vh;
+        width: 7vw;
+        padding-left: 2rem;
+        background-color: var(--primary-color);
+        color: white;
+        font-size: larger;
+    }
+    .hypo-btn-box{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        padding-right: 2.5rem;
+    }
+    button{
+        width: 7vw;
+        height:5vh;
+        border-radius: 1rem;
+        color: white;
+        background-color:var(--primary-color);
+        font-size: larger;
+        margin-top: 1rem;
+        margin-bottom: 1rem;
+    }
+
+    .hypo-output{
+        border: 1px solid black;
+        height: 8vh;
+        width:8vw;
+        margin: auto;
+        margin-left: 16rem;
+        padding-left:5rem;
+        padding-top: 2rem;
+        border-radius: 1rem;
+        margin-top: 1rem;
+    }
+
+
+
+
+</style>
+</head>
+<body>
+    
+
+    <div class="main">
+        <div class="head">
+            <h2>Enter the lengths of sides of right angle triangle</h2>
+        </div>
+        <div class="img">
+            <img src="images/triangle.png" alt="image">
+        </div>
+
+        <div class="flex-box">
+            <strong>a=</strong><input type="number" class="side1 side">
+            <strong>b=</strong><input type="number" class="side2 side">
+        </div>
+        <div class="hypo-btn-box">
+            <button class="hypo-btn">submit</button>
+        </div>
+        <div class="head" style="margin-left: 10rem;">
+            <h2>Hypotenuse will be calculated here-
+            </h2>
+        </div>
+        <div class="hypo-output">
+            <p id="hypo-output">
+
+            </p>
+        </div>
+    </div>
+ 
+
+        <footer class="footer">
+            
+            <ul class="social-links list-non-bullet">
+                <li class="list-item-inline">
+                    <a class="link" href="https://www.linkedin.com/in/techieshubham">linkedin</a>
+                </li>
+                <li class="list-item-inline">
+                    <a class="link" href="https://github.com/techieshubham30">github</a>
+                </li>
+                <li class="list-item-inline">
+                    <a class="link" href="https://twitter.com/shubhamsingh088">twitter</a>
+                </li>
+                <li class="list-item-inline">
+                    <a class="link" href="https://shubhamsingh-1.netlify.app/">portfolio</a>
+                </li>
+            </ul>
+            <br>
+
+            <hr style="color: white;">
+
+            <div class="legacyText">
+                &COPY; <a id="legacyText" href="https://shubhamsingh-1.netlify.app/">shubham</a> | <a id="legacyText" href="https://shubhamsingh-1.netlify.app/projects.html">see my other projects</a>
+
+            </div>
+        </footer>
+
+
+    <script src="hypo.js"></script>
+
+
+</body>
+</html>

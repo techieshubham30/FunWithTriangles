@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fun with triangle</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Montserrat&display=swap" rel="stylesheet">
+</head>
+<style>
+    .inpt{
+        margin: 1rem;
+    }
+    input{
+        height:8vh;
+        width:8vw;
+        padding-left: 1rem;
+        background-color: var(--primary-color);
+        color: white;
+    }
+    .btn{
+        width:12vw;
+        margin: auto;
+    }
+    button{
+        width: 7vw;
+        height:5vh;
+        border-radius: 1rem;
+        color: white;
+        background-color:var(--primary-color);
+        font-size: larger;
+        margin-top: 1rem;
+        margin-bottom: 1rem;
+    
+    }
+    
+    #output{
+        border: 1px solid black;
+        height: 8vh;
+        width:20vw;
+        margin: auto;
+        margin-left: 5rem;
+        padding-left:5rem;
+        padding-top: 2rem;
+        background-color: var(--primary-color);
+        color: white;
+        border-radius: 1rem;
+    }
+    
+</style>
+<body>
+    <div class="container">
+
+        <div class="box-container">
+            <h2 style="font-size: larger;">Enter the angles in below input boxes and we will tell you if those angles make a Triangle</h2>
+            
+           <div class="inpt">
+               <input type="number" min="1" max="180" class="inpt1">
+           </div>
+
+           <div class="inpt">
+            <input type="number" min="1" max="180" class="inpt2">
+           </div>
+
+           <div class="inpt">
+            <input type="number" min="1" max="180" class="inpt3">
+           </div>
+           
+        </div>
+        <div class="btn" >
+            <button id="btn">submit</button>
+        </div>
+
+        <div id="output">
+            <p class="output">Output will be shown here</p>
+
+        </div>
+
+       
+    </div>
+ 
+        <footer class="footer">
+            
+            <ul class="social-links list-non-bullet">
+                <li class="list-item-inline">
+                    <a class="link" href="https://www.linkedin.com/in/techieshubham">linkedin</a>
+                </li>
+                <li class="list-item-inline">
+                    <a class="link" href="https://github.com/techieshubham30">github</a>
+                </li>
+                <li class="list-item-inline">
+                    <a class="link" href="https://twitter.com/shubhamsingh088">twitter</a>
+                </li>
+                <li class="list-item-inline">
+                    <a class="link" href="https://shubhamsingh-1.netlify.app/">portfolio</a>
+                </li>
+            </ul>
+            <br>
+
+            <hr style="color: white;">
+
+            <div class="legacyText">
+                &COPY; <a id="legacyText" href="https://shubhamsingh-1.netlify.app/">shubham</a> | <a id="legacyText" href="https://shubhamsingh-1.netlify.app/projects.html">see my other projects</a>
+
+            </div>
+        </footer>
+
+
+    <script src="angle.js"></script>
+
+
+</body>
+</html>

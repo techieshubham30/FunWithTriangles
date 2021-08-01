@@ -10,116 +10,138 @@
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Montserrat&display=swap" rel="stylesheet">
 <style>
-    .areacontainer{
-        width: 50vw;
-        margin: auto;
-    }
-    .radio{
-        
-    }
-    img{
-        height:30vh;
-        margin-top: 1rem;
-    }
-    .side{
-        margin: 1rem;
-        margin-right: 5rem;
-        height: 8vh;
-        width: 7vw;
-        padding-left: 2rem;
-        background-color: var(--primary-color);
-        color: white;
-        font-size: larger;
-
-    }
-
-    button{
-        width: 7vw;
-        height:5vh;
-        border-radius: 1rem;
-        color: white;
-        background-color:var(--primary-color);
-        font-size: larger;
-        margin-top: 1rem;
-        margin-bottom: 1rem;
-
-    }
-    .flex-box{
-        display: flex;
-        justify-content:center;
-        align-items: center;
-    }
-    .area-1-btn-box{
-        display: flex;
-        justify-content:center;
-        align-items: center;
-
-    }
-    .area1-output{
-        border: 1px solid black;
-        height: 8vh;
-        width:8vw;
-        margin: auto;
-        margin-left: 16rem;
-        padding-left:5rem;
-        padding-top: 2rem;
-        border-radius: 1rem;
-        margin-top: 1rem;
-    }
-    .img{
-        margin-left: 9rem;
-        margin-top: 2rem;
-    }
+   .areacontainer{
+       display: flex;
+       flex-direction: column;
+       height: 84vh;
+       width: 60vw;
+       display: block;
+       margin: auto;
+       margin-bottom: 3rem;
+       
+   }
     
+   #base,#height,.side{
+       width: 6vw;
+       height: 8vh;
+       border: 2px solid black;
+       margin: 0.5rem;
+       padding-left: 1rem;
+   }
+   button{
+       width: 12vw;
+       height: 5vh;
+       margin-left: 7rem;
+       border-radius: 1rem;
+       background-color: var(--primary-color);
+       color: white;
+       margin-top: 1rem;
+       margin-bottom: 1rem;
+   }
+
+   .output{
+       border: 2px solid black;
+       width: 15vw;
+       height: 5vh;
+       background-color: var(--primary-color);
+       color: white;
+       margin-left: 4rem;
+       margin-top: 1rem;
+       padding-top: 1rem;
+       margin-bottom:2rem;
+       padding-left: 2rem;
+   }
+   .inputRadio{
+       margin: 1rem;
+   }
 
 </style>
 </head>
 <body>
  <div class="areacontainer">
-     <h1 style="margin-left: 16rem;">Calculate Area</h1>
-     <h3 style="margin-left: 5rem;">Select an option below as per the data you have for a triangle</h3>
-     <div class="radio">
-         <div>
-            <input type="radio"  id="area1">
-            <label>
-                If you have base and height length
+     <h1 style="text-align: center;">Calculate Area</h1>
+     <h3 style="text-align: center; margin-bottom: 1rem;" >Select an option below as per the data you have for a triangle</h3>
+     <div style="margin-left:11rem;">
+        <div class="inputRadio" >
+            <input type="radio"  id="radio1" name="input">
+            <label for="radio1">If you have base and height length</label>
+         </div>
+    
+         <div class="inputRadio">
+            <input type="radio"  id="radio2" name="input">
+            <label for="radio2">If you have length of 3 sides</label>
+         </div>
+    
+         <div class="inputRadio">
+            <input type="radio"  id="radio3" name="input">
+            <label for="radio3"> If you have length of 2 sides and included angle
             </label>
          </div>
-        
-        <div>
-        <input type="radio"  id="area2">
-        <label> If you have length of 3 sides</label>
-        </div>
-        <div>
-        <input type="radio"  id="area3">
-        <label> If you have length of 2 sides and included angle
-        </label>
-        </div>
-
-        <div class="areacal-1">
-            <div class="img">
-                <img src="images/triangle-base-height.png" alt="image">
-            </div>
-    
-            <div class="flex-box">
-                <strong>base=</strong><input type="number" class="base side">
-                <strong>height=</strong><input type="number" class="height side">
-            </div>
-            <div class="area-1-btn-box">
-                <button class="area1-btn">calculate</button>
-            </div>
-            <div class="head" style="margin-left: 10rem;">
-                <h2>Area will be calculated here-</h2>
-            </div>
-            <div class="area1-output">
-                <p id="area1-output">
-    
-                </p>
-            </div>
-        </div>
-        
      </div>
+    
+      <div style="margin-left: 13rem;" class="area1">
+        <img src="images/triangle-base-height.png" alt="image" style="width: 25vw;height: 25vh;">
+
+     <div class="outputbox">
+
+     <strong>base=</strong><input type="number"  id="base">
+     <strong>height=</strong><input type="number"  id="height">
+
+     </div>
+
+     <button id="btn_area1">calculate</button>
+     <h2 style="margin-left: 3rem;">Area will be calculated here-</h2>
+     <div class="output" style="margin-left: 5rem;">
+         <p id="output-area1">
+            Area= 1/2*base*height
+         </p>
+     </div>
+      </div> 
+
+      <div style="margin-left: 13rem;" class="area2">
+        <img src="images/triangle-three-side.png" alt="image" style="width: 25vw;height: 25vh;">
+
+     <div class="outputbox">
+
+     <strong>a=</strong><input type="number"  id="side1" class="side">
+     <strong>b=</strong><input type="number"  id="side2" class="side">
+     <strong>c=</strong><input type="number"  id="side3" class="side">
+
+
+     </div>
+
+     <button id="btn_area2" style="margin-left: 9rem;">calculate</button>
+     <h2 style="margin-left: 5rem;">Area will be calculated here-</h2>
+     <div class="output" style="margin-left: 7rem;">
+         <p id="output-area2">
+            Area= √s(s-a)(s-b)(s-c)
+            
+         </p>
+     </div>
+      </div>
+
+      <div style="margin-left: 13rem;" class="area3">
+        <img src="images/triangle-two-sides-angle-between-them (1).jpg" alt="image" style="width: 25vw;height: 25vh;">
+
+     <div class="outputbox">
+
+     <strong>a=</strong><input type="number"  id="a1" class="side">
+     <strong>b=</strong><input type="number"  id="a2" class="side">
+     <strong>angle=</strong><input type="number"  id="angle" class="side">
+
+
+     </div>
+
+     <button id="btn_area3" style="margin-left: 9rem;">calculate</button>
+     <h2 style="margin-left: 5rem;">Area will be calculated here-</h2>
+     <div class="output" style="margin-left: 7rem;">
+         <p id="output-area3">
+            Area= 1/2*b*c*sin(A)
+         </p>
+     </div>
+      </div>
  </div>
+     
 
         <footer class="footer">
             
@@ -148,7 +170,7 @@
         </footer>
 
 
-    <script src="app.js"></script>
+    <script src="area.js"></script>
 
 
 </body>

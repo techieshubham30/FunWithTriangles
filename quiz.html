@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -7,12 +8,12 @@
     <title>Fun with triangle</title>
     <link rel="stylesheet" href="style.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Montserrat&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat&display=swap" rel="stylesheet">
     <style>
-        .quiz-output{
-            width:15vw;
-            height:6vh;
+        .quiz-output {
+            width: 15vw;
+            height: 6vh;
             border: 1px solid black;
             padding-left: 1rem;
             padding-top: 1rem;
@@ -21,26 +22,30 @@
             font-size: larger;
             margin-bottom: 1rem;
         }
-        form{
+
+        form {
             width: 40vw;
             margin: auto;
         }
-        .ques{
-            width:40vw;
-            height:15vh;
+
+        .question-container {
+            width: 40vw;
+            height: 15vh;
             border: 1px solid black;
             background-color: var(--primary-color);
             color: white;
             margin: 1rem;
         }
-        .ot{
+
+        .ot {
             display: flex;
             flex-direction: column;
             justify-content: center;
             align-items: center;
         }
-        button{
-            height:6vh;
+
+        button {
+            height: 6vh;
             width: 10vw;
             margin-bottom: 1rem;
             background-color: var(--primary-color);
@@ -48,98 +53,153 @@
             border-radius: 1rem;
             font-size: larger;
         }
+        input{
+            margin-top:0.5rem;
+        }
+        .non-bullets{
+            list-style: none;
+        }
+        .navigation #link{
+            text-decoration: none;  
+            color: white;
+        }
+        .navigation ul{
+            display: flex;
+            flex-direction:end;
+        }
+        .navigation .list-inline-items{
+            padding: 1rem;
+        }
+        .navigation{
+            border: 1px solid black;
+            background-color:var(--primary-color);
+            height: 12vh;
+            
+        }
+        .navigation ul li:hover{
+            text-decoration: underline;
+
+        }
+        
     </style>
 </head>
+
 <body>
-    <form name="quiz" id="quiz">
-      <div class="ques" id="ques1">
-          <p>1. If a triangle has angles 135<sup>0</sup>, 15<sup>0</sup>, 30<sup>0</sup>. Is it an obtuse triangle?</p>
-          <p><input type="radio" name="question1" value="yes">A. yes</p>
-          <p><input type="radio" name="question1" value="no">B. no</p>
+    <nav class="navigation">
+        <ul class="non-bullets">
+            <li class="list-inline-items">
+                <a id="link" href="index.html">Home</a>
+            </li>
+            <li class="list-inline-items">
+                <a id="link" href="angle.html"> Angle of triangle</a>
+            </li>
+            <li class="list-inline-items">
+                <a id="link" href="hypotenuse.html">Check hypotetenuse</a>
+            </li>
+            <li class="list-inline-items">
+                <a id="link" href="area.html">Calculate area</a>
+            </li>
+            <li class="list-inline-items">
+                <a id="link" href="quiz.html">Take a quiz</a>
+            </li>
+        </ul>
+    </nav>
+    <form id="quiz-form">
+        <div class="question-container">
+            <p>1. If a triangle has angles 135<sup>0</sup>, 15<sup>0</sup>, 30<sup>0</sup>. Is it an obtuse triangle?
+            </p>
+            <label><input type="radio" name="question1" value="yes">A. yes</label>
+            <label><input type="radio" name="question1" value="no">B. no</label>
 
-      </div>
+        </div>
 
-      <div class="ques" id="ques2">
-        <p>2. If a triangle has angles 115<sup>0</sup>, 25<sup>0</sup>, 40<sup>0</sup>. Is it an acute triangle?</p>
-        <p><input type="radio" name="question2" value="yes">A. yes</p>
-        <p><input type="radio" name="question2" value="no">B. no</p>
+        <div class="question-container">
+            <p>2. If a triangle has angles 115<sup>0</sup>, 25<sup>0</sup>, 40<sup>0</sup>. Is it an acute triangle?</p>
+            <label><input type="radio" name="question2" value="yes">A. yes</label>
+            <label><input type="radio" name="question2" value="no">B. no</label>
 
-    </div>
+        </div>
 
-    <div class="ques" id="ques3">
-        <p>3. If a triangle has angles 90<sup>0</sup>, 60<sup>0</sup>, 30<sup>0</sup>. Is it a right angle triangle?</p>
-        <p><input type="radio" name="question3" value="yes">A. yes</p>
-        <p><input type="radio" name="question3" value="no">B. no</p>
+        <div class="question-container">
+            <p>3. If a triangle has angles 90<sup>0</sup>, 60<sup>0</sup>, 30<sup>0</sup>. Is it a right angle triangle?
+            </p>
+            <label><input type="radio" name="question3" value="yes">A. yes</label>
+            <label><input type="radio" name="question3" value="no">B. no</label>
 
-    </div>
-    <div class="ques" id="ques4">
-        <p>4. A triangle has angles 60<sup>0</sup>, 60<sup>0</sup>, 60<sup>0</sup>. Is it an equilateral triangle?</p>
-        <p><input type="radio" name="question4" value="yes">A. yes</p>
-        <p><input type="radio" name="question4" value="no">B. no</p>
+        </div>
+        <div class="question-container">
+            <p>4. A triangle has angles 60<sup>0</sup>, 60<sup>0</sup>, 60<sup>0</sup>. Is it an equilateral triangle?
+            </p>
+            <label><input type="radio" name="question4" value="yes">A. yes</label>
+            <label><input type="radio" name="question4" value="no">B. no</label>
 
-    </div>
+        </div>
 
-    <div class="ques" id="ques5">
-        <p>5. If a triangle has angles 250, 750, 800. Is it an acute triangle?</p>
-        <p><input type="radio" name="question5" value="yes">A. yes</p>
-        <p><input type="radio" name="question5" value="no">B. no</p>
+        <div class="question-container">
+            <p>5. If a triangle has angles 250, 750, 800. Is it an acute triangle?</p>
+            <label><input type="radio" name="question5" value="yes">A. yes</label>
+            <label><input type="radio" name="question5" value="no">B. no</label>
 
-    </div>
-    <div class="ques" id="ques6">
-        <p>6. If a triangle has 2 sides with equal lengths and 75<sup>0</sup> angle between them. What is the type of triangle?</p>
-        <p><input type="radio" name="question6" value="Equilateral">A. Equilateral</p>
-        <p><input type="radio" name="question6" value="Isosceles">B. Isosceles</p>
-        <p><input type="radio" name="question6" value="Right Angle traingle">C. Right Angle traingle</p>
-
-
-    </div>
-
-    <div class="ques" id="ques7">
-        <p>7. If a triangle has 2 angles of 75<sup>0</sup>. What is the measure of third angle in degree?</p>
-        <p><input type="radio" name="question7" value="25">A. 25</p>
-        <p><input type="radio" name="question7" value="30">B. 30</p>
-        <p><input type="radio" name="question7" value="15">C.15</p>
-
-
-    </div>
-
-    <div class="ques" id="ques8">
-        <p>8. If a triangle has 2 sides with equal lengths and 60<sup>0</sup> angle between them. What is the type of triangle?</p>
-        <p><input type="radio" name="question8" value="Equilateral ">A.Equilateral </p>
-        <p><input type="radio" name="question8" value="Isosceles">B. Isosceles</p>
-        <p><input type="radio" name="question8" value="Both">C. Both</p>
-
-
-    </div>
-
-    <div class="ques" id="ques9">
-        <p>9. The perimeter of an equilateral triangle is 15cm. What is the length of one side?</p>
-        <p><input type="radio" name="question9" value="15cm">A.15cm </p>
-        <p><input type="radio" name="question9" value="45cm">B.45cm</p>
-        <p><input type="radio" name="question9" value="5cm">C.5cm</p>
+        </div>
+        <div class="question-container">
+            <p>6. If a triangle has 2 sides with equal lengths and 75<sup>0</sup> angle between them. What is the type
+                of triangle?</p>
+            <label><input type="radio" name="question6" value="Equilateral">A. Equilateral<label>
+                    <label><input type="radio" name="question6" value="Isosceles">B. Isosceles</label>
+                    <label><input type="radio" name="question6" value="Right Angle traingle">C. Right Angle
+                        traingle</label>
 
 
-    </div>
+        </div>
 
-    <div class="ques" id="ques10">
-        <p>10. If a triangle has sides of 2cm, 3cm, 4cm, what is the type of triangle?</p>
-        <p><input type="radio" name="question10" value="Equilateral">A.Equilateral </p>
-        <p><input type="radio" name="question10" value="Isosceles">B.Isosceles</p>
-        <p><input type="radio" name="question10" value="Scalene">C.Scalene</p>
+        <div class="question-container">
+            <label>7. If a triangle has 2 angles of 75<sup>0</sup>. What is the measure of third angle in
+                degree?</label>
+            <label><input type="radio" name="question7" value="25">A. 25</label>
+            <label><input type="radio" name="question7" value="30">B. 30</label>
+            <label><input type="radio" name="question7" value="15">C.15</label>
 
 
-    </div>
+        </div>
 
+        <div class="question-container">
+            <p>8. If a triangle has 2 sides with equal lengths and 60<sup>0</sup> angle between them. What is the type
+                of triangle?</p>
+            <label><input type="radio" name="question8" value="Equilateral ">A.Equilateral </label>
+            <label><input type="radio" name="question8" value="Isosceles">B. Isosceles</label>
+            <label><input type="radio" name="question8" value="Both">C. Both</label>
+
+
+        </div>
+
+        <div class="question-container">
+            <p>9. The perimeter of an equilateral triangle is 15cm. What is the length of one side?</p>
+            <label><input type="radio" name="question9" value="15cm">A.15cm </label>
+            <label><input type="radio" name="question9" value="45cm">B.45cm</label>
+            <label><input type="radio" name="question9" value="5cm">C.5cm</label>
+
+
+        </div>
+
+        <div class="question-container">
+            <p>10. If a triangle has sides of 2cm, 3cm, 4cm, what is the type of triangle?</p>
+            <label><input type="radio" name="question10" value="Equilateral">A.Equilateral </label>
+            <label><input type="radio" name="question10" value="Isosceles">B.Isosceles</label>
+            <label><input type="radio" name="question10" value="Scalene">C.Scalene</label>
+
+        </div>
     </form>
+
     <div class="ot">
-        <button class="button" id="submitQuiz">Submit</button>
+        <button id="submit-answer-btn">Submit</button>
         <div class="quiz-output">
             <p id="quiz-output">Score will be shown here-</p>
         </div>
 
     </div>
+
     <footer class="footer">
-            
+
         <ul class="social-links list-non-bullet">
             <li class="list-item-inline">
                 <a class="link" href="https://www.linkedin.com/in/techieshubham">linkedin</a>
@@ -159,12 +219,14 @@
         <hr style="color: white;">
 
         <div class="legacyText">
-            &COPY; <a id="legacyText" href="https://shubhamsingh-1.netlify.app/">shubham</a> | <a id="legacyText" href="https://shubhamsingh-1.netlify.app/projects.html">see my other projects</a>
+            &COPY; <a id="legacyText" href="https://shubhamsingh-1.netlify.app/">shubham</a> | <a id="legacyText"
+                href="https://shubhamsingh-1.netlify.app/projects.html">see my other projects</a>
 
         </div>
     </footer>
-   
+
     <script src="quiz.js"></script>
-    
+
 </body>
+
 </html>

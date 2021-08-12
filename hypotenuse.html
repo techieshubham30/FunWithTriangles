@@ -76,13 +76,52 @@
         color: white;
     }
 
+    .non-bullets{
+            list-style: none;
+        }
+        .navigation #link{
+            text-decoration: none;  
+            color: white;
+        }
+        .navigation ul{
+            display: flex;
+            flex-direction:end;
+        }
+        .navigation .list-inline-items{
+            padding: 1rem;
+        }
+        .navigation{
+            border: 1px solid black;
+            background-color:var(--primary-color);
+            height: 12vh;
+            
+        }
+        .navigation ul li:hover{
+            text-decoration: underline;
 
-
-
+        }
 </style>
 </head>
 <body>
-    
+    <nav class="navigation">
+        <ul class="non-bullets">
+            <li class="list-inline-items">
+                <a id="link" href="index.html">Home</a>
+            </li>
+            <li class="list-inline-items">
+                <a id="link" href="angle.html"> Angle of triangle</a>
+            </li>
+            <li class="list-inline-items">
+                <a id="link" href="hypotenuse.html">Check hypotetenuse</a>
+            </li>
+            <li class="list-inline-items">
+                <a id="link" href="area.html">Calculate area</a>
+            </li>
+            <li class="list-inline-items">
+                <a id="link" href="quiz.html">Take a quiz</a>
+            </li>
+        </ul>
+    </nav>
 
     <div class="main">
         <div class="head">

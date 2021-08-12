@@ -1,29 +1,18 @@
-var angle=document.querySelector('#btn');
-angle.addEventListener('click',checkAngle);
-function checkAngle(){
-    var inpt1=parseInt(document.querySelector('.inpt1').value);
-    var inpt2=parseInt(document.querySelector('.inpt2').value);
-    var inpt3=parseInt(document.querySelector('.inpt3').value);
-    var output=document.querySelector('.output');
-    var anglesum=inpt1+inpt2+inpt3;
+const inputs = document.querySelectorAll('.input');
+const outputEle = document.querySelector('.output');
+const submitBtn = document.querySelector('#btn');
 
-    if(anglesum==180){
-        output.innerText="Yuhu! these angles can make a triangle";
-
-    }else{
-       output.innerText="Oops! these angles cannot make a triangle";
+function isTriangle() {
+    let sumOfAngles = calculateSumOfAngles(Number(inputs[0].value), Number(inputs[1].value), Number(inputs[2].value));
+    if (sumOfAngles === 180) {
+        outputEle.innerText = "Yuhu! these angles can make a triangle";
+    } else {
+        outputEle.innerText = "Oops! these angles cannot make a triangle";
     }
-
 }
 
-function calcHypo(){
-    var a=parseInt(document.querySelector('.side1').value);
-    var b=parseInt(document.querySelector('.side2').value);
-
-    a=a*a;
-    b=b*b;
-    var c=a+b;
-    document.querySelector('#hypo-output').innerText=Math.sqrt(c);
-    
-
+function calculateSumOfAngles(angle1, angle2, angle3) {
+    let sumOfAngles = angle1 + angle2 + angle3;
+    return (sumOfAngles);
 }
+submitBtn.addEventListener("click", isTriangle);
